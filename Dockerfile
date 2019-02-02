@@ -7,6 +7,6 @@ COPY package.json /app/package.json
 RUN yarn --ignore-scripts
 COPY . /app
 RUN yarn
-ENV SERVICE_ACCOUNT_DATA
+ENV SERVICE_ACCOUNT_DATA {}
 ENV APP sheets-server
 CMD yarn start $APP --port 8080 --static
